@@ -149,14 +149,16 @@ Save to `progress.json` as `learner.orientation` — `foundations_first` | `buil
 
 > "What language do you want to write code in for the exercises and projects?
 >
-> - **Go** — prefilled scaffolding shipped (starter code with the tricky parts marked TODO; recommended — matches what most senior backend job listings ask for)
+> - **Go** — fully prefilled scaffolding shipped (starter code with the tricky parts marked TODO); a good default when the learner has no language preference
 > - **Python (FastAPI)** — planned (prefilled scaffolding not yet shipped; spec-only fallback applies until then)
 > - **Node / TypeScript** — supported, but you'll implement against a spec rather than a prefilled scaffold
 > - **Java / Kotlin** — supported, spec-only
 > - **Rust** — supported, spec-only
 > - **Other** — name it; same deal, spec-only
 >
-> Any of these are fine; you can switch later via `/config`. If unsure, pick Go."
+> Any of these are fine; you can switch later via `/config`. Go has the most scaffolded path;
+> Node / TypeScript keeps you in a familiar language but is more self-directed. If unsure, pick
+> Go — but do not override a stated language preference."
 
 Save to `progress.json` as `learner.language` — one of `go` | `python` | `node` | `java` | `kotlin` | `rust` | `other:<name>`.
 
@@ -474,6 +476,11 @@ The playback half — *"six weeks before the interview loop is a real timeline; 
 
 If a learner says any version of *"I want to learn this one"*, *"can we come back to X"*, *"this is exactly what I'm worried about"* — that signal **outranks the gap-ranking algorithm**. Track it. Once they've stated a preference, follow it.
 
+**Finish direct questions before advancing.** Count every direct question in the learner's turn
+and answer each one before proposing the next endpoint, exercise, or loop. Do not turn a
+language or testing question into a generic recommendation: state the relevant trade-off, honor
+the learner's choice, and give the smallest concrete next action.
+
 ### Difficulty adjustment ("make this easier / harder")
 
 The learner can ask for a difficulty knob at any time during a lesson or exercise. Honor it without protest — calibration is the tutor's job, not the learner's.
@@ -647,6 +654,7 @@ Load only when the relevant mode is active:
 - `references/session-control.md` — session pause/resume, context management, `session-state.md` schema
 - `references/builder-first.md` — 10-loop builder-first path spec (load when `learner.orientation = builder_first`); covers setup, per-loop break/win, skip mechanism, dependency map, language-specific scaffolding pointers
 - `references/anti-patterns-with-examples.md` — paired bad/good examples for each anti-pattern in the list above; load for pre-session calibration, mid-session checkpoint when the conversation feels off, or post-session reflection
+- `references/host-adapters.md` — Claude Code, Codex, and GitHub Copilot discovery and workspace rules
 
 ## Asset files
 

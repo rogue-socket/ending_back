@@ -92,6 +92,10 @@ Pass = 2 of 3 → loop marked `done` in `progress.json → loops.entries[]`. Mis
 - Has at least 3 tests (happy path, 404, 400)
 - The whole thing fits in <200 lines
 
+**Testing starts here, not later.** Before calling Loop 1 complete, write the happy-path test
+and both error-path tests. A learner who asks whether to test now should hear: *yes — these
+three tests are part of learning the HTTP contract, not polish for a later loop.*
+
 **BREAK.** Run two concurrent POSTs to the in-memory map. In Go, `go test -race` catches it; in Python with the GIL, the failure is more subtle (lost writes, not a panic). Show the race. Fix with a mutex. *Don't* skip ahead to "use a real DB" — that's Loop 2's job.
 
 **What the learner internalizes:**

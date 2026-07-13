@@ -34,9 +34,15 @@ codex "start the backend tutor"
 
 Codex reads `AGENTS.md` from cwd; no symlink needed.
 
-### Copilot CLI / Cursor / Aider / others
+### GitHub Copilot CLI / Cursor / Aider / others
 
-Same shape as Codex. `cd` into the cloned repo (or copy `AGENTS.md` into your project) before invoking the agent.
+GitHub Copilot uses this repository's `.github/copilot-instructions.md` adapter. Open Copilot Chat from the cloned repository and ask:
+
+```text
+Use the backend-tutor skill in this repo and start the course.
+```
+
+Cursor, Aider, and other AGENTS.md-aware harnesses follow the Codex shape: `cd` into the cloned repo (or copy `AGENTS.md` into your project) before invoking the agent.
 
 ---
 
@@ -73,9 +79,9 @@ codex "start the backend tutor"
 
 Codex reads `AGENTS.md` from cwd; no junction needed.
 
-### Other harnesses on Windows
+### GitHub Copilot CLI / other harnesses on Windows
 
-Same shape — `cd` into the cloned repo before invoking the agent.
+For GitHub Copilot, open Copilot Chat from the cloned repository and use the same prompt as macOS/Linux. Other AGENTS.md-aware harnesses follow the Codex shape — `cd` into the cloned repo before invoking the agent.
 
 ---
 
